@@ -11,6 +11,9 @@ class Dialogo(QDialog):
     AusInUS = 3
     UKInUS = 1.5
     JPYInUS = 157.63500  # Nueva tasa de conversión JPY a USD
+    SoInUS = 4.0  # Tasa de conversión Soles a USD
+    LibInUS = 0.75  # Tasa de conversión Libras a USD
+    LirInUS = 2000.0  # Tasa de conversión Liras a USD
 
     def __init__(self):
         super().__init__()
@@ -30,6 +33,12 @@ class Dialogo(QDialog):
             converted = initial / self.AusInUS
         elif self.brFromJPY.isChecked():  # Nuevo: conversión desde JPY
             converted = initial / self.JPYInUS
+        elif self.brFromPEN.isChecked():  # Nuevo: conversión desde JPY
+            converted = initial / self.SoInUS
+        elif self.brFromGBP.isChecked():  # Nuevo: conversión desde JPY
+            converted = initial / self.LibInUS
+        elif self.brFromITL.isChecked():  # Nuevo: conversión desde JPY
+            converted = initial / self.LirInUS
 
         if self.brToUS.isChecked():
             converted = converted * self.USInUS
@@ -43,6 +52,15 @@ class Dialogo(QDialog):
         elif self.brToJPY.isChecked():  # Nuevo: conversión hacia JPY
             converted = converted * self.JPYInUS
             self.lbCon.setText("JPY")
+        elif self.brToPEN.isChecked():  # Nueva moneda: Soles
+            converted = converted * self.SoInUS
+            self.lbCon.setText("PEN")
+        elif self.brToGBP.isChecked():  # Nueva moneda: Libras
+            converted = converted * self.LibInUS
+            self.lbCon.setText("GBP")
+        elif self.brToITL.isChecked():  # Nueva moneda: Liras
+            converted = converted * self.LirInUS
+            self.lbCon.setText("ITL")
 
         self.lbResult.setText(f"{converted:.5f}")
 

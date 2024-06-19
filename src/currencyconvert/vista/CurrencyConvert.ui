@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>385</width>
-    <height>208</height>
+    <height>355</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,7 +76,7 @@
      <x>10</x>
      <y>40</y>
      <width>71</width>
-     <height>141</height>
+     <height>231</height>
     </rect>
    </property>
    <property name="title">
@@ -137,6 +137,45 @@
      <string>JPY$</string>
     </property>
    </widget>
+   <widget class="QRadioButton" name="brFromPEN">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PEN$</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="brFromGBP">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>GBP$</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="brFromITL">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ITL$</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QGroupBox" name="gbTo">
    <property name="geometry">
@@ -144,7 +183,7 @@
      <x>100</x>
      <y>40</y>
      <width>71</width>
-     <height>141</height>
+     <height>231</height>
     </rect>
    </property>
    <property name="title">
@@ -203,6 +242,45 @@
     </property>
     <property name="text">
      <string>JPY$</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="brToPEN">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PEN$</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="brToGBP">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>GBP$</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="brToITL">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ITL$</string>
     </property>
    </widget>
   </widget>
