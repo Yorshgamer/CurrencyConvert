@@ -7,6 +7,7 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QMessageBox
 
 class Dialogo(QDialog):
+    USInUS = 1
     AusInUS = 3
     UKInUS = 1.5
     JPYInUS = 157.63500  # Nueva tasa de conversión JPY a USD
@@ -30,12 +31,18 @@ class Dialogo(QDialog):
         elif self.brFromJPY.isChecked():  # Nuevo: conversión desde JPY
             converted = initial / self.JPYInUS
 
+        if self.brToUS.isChecked():
+            converted = converted * self.USInUS
+            self.lbCon.setText("US")
         if self.brToUK.isChecked():
             converted = converted * self.UKInUS
+            self.lbCon.setText("UK")
         elif self.brToAUS.isChecked():
             converted = converted * self.AusInUS
+            self.lbCon.setText("AUS")
         elif self.brToJPY.isChecked():  # Nuevo: conversión hacia JPY
             converted = converted * self.JPYInUS
+            self.lbCon.setText("JPY")
 
         self.lbResult.setText(f"{converted:.5f}")
 
